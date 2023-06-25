@@ -13,8 +13,10 @@ function getComputerChoice(array) {
 // Call the function to make a random choice and assign it to a variable
 const cpuChoice = getComputerChoice(choices);
 
-// Have player choose rock, paper, or scissors
-// Make player choice case-insensitive
+// Have player choose rock, paper, or scissors and change it to lowercase
+const playerChoice = prompt("Choose rock, paper, or scissors");
+const plyChoice = playerChoice.toLowerCase();
+
 // Compare computer choice to player choice
 // Announce the winner
 // Play 5 games
