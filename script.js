@@ -10,8 +10,8 @@ function getComputerChoice(array) {
     // Return the item at the random index
     return array[randomChoice];
 }
-// Call the function to make a random choice
-getComputerChoice(choices);
+// Call the function to make a random choice and assign it to a variable
+const cpuChoice = getComputerChoice(choices);
 
 // Have player choose rock, paper, or scissors
 // Make player choice case-insensitive
