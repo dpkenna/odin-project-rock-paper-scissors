@@ -37,7 +37,6 @@ const cpuChoice = getComputerChoice(choices);
 // Have player choose rock, paper, or scissors and change it to lowercase
 const playerChoice = prompt("Choose rock, paper, or scissors");
 const plyChoice = playerChoice.toLowerCase();
-console.log(playRound(plyChoice, cpuChoice));
 
 // Play 5 games
     // Keep score for 5 games
