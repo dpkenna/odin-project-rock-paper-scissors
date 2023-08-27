@@ -18,7 +18,7 @@ function game() {
     let computerScore = 0;
 
     // Loop for 5 games
-    for (let i = 0; i < 5; i++) {
+    // for (let i = 0; i < 5; i++) {
         // Gameplay function
         function playRound(playerSelection, computerSelection) {
         // Compare computer choice to player choice and announce the result
@@ -58,7 +58,7 @@ function game() {
         
         // Report the score
         console.log("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
-    }
+    // }
     
     // Announce the winner at the end of 5 games
     if (playerScore > computerScore) {
@@ -73,4 +73,3 @@ function game() {
 
 // Play the game
 game();
-    
