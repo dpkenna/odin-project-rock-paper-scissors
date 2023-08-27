@@ -61,12 +61,10 @@ function game() {
     // }
     
     // Announce the winner at the end of 5 games
-    if (playerScore > computerScore) {
+    if (playerScore > 5) {
         console.log("You beat the computer!")
-    } else if (playerScore < computerScore) {
+    } else if (computerScore > 5) {
         console.log("The computer beat you!")
-    } else {
-        console.log("You tied the computer!")
     }
     
 }
