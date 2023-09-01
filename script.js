@@ -64,7 +64,7 @@ function game() {
         console.log("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
     // }
     
-    // Announce the winner at the end of 5 games
+    // Announce the winner
     if (playerScore > 5) {
         console.log("You beat the computer!")
     } else if (computerScore > 5) {
@@ -72,6 +72,3 @@ function game() {
     }
     
 }
-
-// Play the game
-game();
