@@ -1,6 +1,14 @@
 // Set up the choices of rock, paper, or scissors
 const choices = ["rock", "paper", "scissors"];
 
+// Set up the buttons to make the player's choice
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let playerChoice = button.id;
+    });
+});
+
 // Have computer choose rock, paper, or scissors at random
 // Function to choose 1 item from an array
 function getComputerChoice(array) {
