@@ -5,7 +5,7 @@ const choices = ["rock", "paper", "scissors"];
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        let playerChoice = button.id;
+        let playerSelection = button.id;
         game();
     });
 });
