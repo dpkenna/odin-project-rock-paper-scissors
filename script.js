@@ -49,12 +49,8 @@ function game() {
         // Call the getComputerChoice function to make a random choice and assign it to a variable
         const cpuChoice = getComputerChoice(choices);
 
-        // Have player choose rock, paper, or scissors and change it to lowercase
-        const playerChoice = prompt("Choose rock, paper, or scissors");
-        const plyChoice = playerChoice.toLowerCase();
-
         // Play a game
-        let round = playRound(plyChoice, cpuChoice);
+        let round = playRound(playerChoice, cpuChoice);
         console.log(round);
 
         // Keep score
