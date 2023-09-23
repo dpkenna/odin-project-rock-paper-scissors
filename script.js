@@ -2,6 +2,7 @@
 const choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
+let display = document.getElementById('results');
 
 // Set up the buttons to make the player's choice
 const buttons = document.querySelectorAll('button');
@@ -53,7 +54,8 @@ function game(playerChoice) {
 
         // Play a game
         let round = playRound(playerChoice, cpuChoice);
-        console.log(round);
+        let roundNode = document.createTextNode(round);
+        results.appendChild(roundNode);
 
         // Keep score
         if (round.substring(0, 7) == "You win") {
@@ -63,7 +65,8 @@ function game(playerChoice) {
         }
         
         // Report the score
-        console.log("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
+        let scoreNode = document.createTextNode("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
+        results.appendChild(scoreNode);
     // }
     
     // Announce the winner
