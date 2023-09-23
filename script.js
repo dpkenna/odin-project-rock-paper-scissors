@@ -1,5 +1,7 @@
 // Set up the choices of rock, paper, or scissors
 const choices = ["rock", "paper", "scissors"];
+let playerScore = 0;
+let computerScore = 0;
 
 // Set up the buttons to make the player's choice
 const buttons = document.querySelectorAll('button');
@@ -23,9 +25,6 @@ function getComputerChoice(array) {
 // Play 5 games
 function game(playerChoice) {
     // Declare score-keeping variable
-    let playerScore = 0;
-    let computerScore = 0;
-
     // Loop for 5 games
     // for (let i = 0; i < 5; i++) {
         // Gameplay function
