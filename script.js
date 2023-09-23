@@ -5,8 +5,8 @@ const choices = ["rock", "paper", "scissors"];
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        let playerSelection = button.id;
-        game();
+        let playerChoice = button.id;
+        game(playerChoice);
     });
 });
 
@@ -21,7 +21,7 @@ function getComputerChoice(array) {
 }
 
 // Play 5 games
-function game() {
+function game(playerChoice) {
     // Declare score-keeping variable
     let playerScore = 0;
     let computerScore = 0;
@@ -30,6 +30,8 @@ function game() {
     // for (let i = 0; i < 5; i++) {
         // Gameplay function
         function playRound(playerSelection, computerSelection) {
+            console.log(playerSelection);
+            console.log(computerSelection);
         // Compare computer choice to player choice and announce the result
             if (playerSelection == "rock" && computerSelection == "paper") {
                 return("You lose! Paper beats rock.");
