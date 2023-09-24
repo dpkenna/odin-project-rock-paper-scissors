@@ -30,6 +30,8 @@ function getComputerChoice(array) {
 
 // Play games until there's a winner
 function game(playerChoice) {
+    // Clear the div so the scorekeeping looks cleaner
+    results.replaceChildren();
         // Gameplay function
         function playRound(playerSelection, computerSelection) {
             console.log(playerSelection);
