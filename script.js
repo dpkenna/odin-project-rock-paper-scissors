@@ -1,7 +1,11 @@
 // Set up the choices of rock, paper, or scissors
 const choices = ["rock", "paper", "scissors"];
+
+// Declare the score-keeping variables
 let playerScore = 0;
 let computerScore = 0;
+
+// Declare the DOM variables
 let display = document.getElementById('results');
 let para = document.createElement("p");
 
@@ -26,9 +30,6 @@ function getComputerChoice(array) {
 
 // Play 5 games
 function game(playerChoice) {
-    // Declare score-keeping variable
-    // Loop for 5 games
-    // for (let i = 0; i < 5; i++) {
         // Gameplay function
         function playRound(playerSelection, computerSelection) {
             console.log(playerSelection);
@@ -70,7 +71,6 @@ function game(playerChoice) {
         let scoreNode = document.createElement("p");
         scoreNode.textContent = ("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
         results.appendChild(scoreNode);
-    // }
     
     // Announce the winner
     if (playerScore >= 5) {
