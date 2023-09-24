@@ -28,7 +28,7 @@ function getComputerChoice(array) {
     return array[randomChoice];
 }
 
-// Play 5 games
+// Play games until there's a winner
 function game(playerChoice) {
         // Gameplay function
         function playRound(playerSelection, computerSelection) {
