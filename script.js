@@ -3,6 +3,7 @@ const choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
 let display = document.getElementById('results');
+let para = document.createElement("p");
 
 // Set up the buttons to make the player's choice
 const buttons = document.querySelectorAll('button');
@@ -54,7 +55,8 @@ function game(playerChoice) {
 
         // Play a game
         let round = playRound(playerChoice, cpuChoice);
-        let roundNode = document.createTextNode(round);
+        let roundNode = document.createElement("p");
+        roundNode.textContent = round;
         results.appendChild(roundNode);
 
         // Keep score
@@ -65,15 +67,20 @@ function game(playerChoice) {
         }
         
         // Report the score
-        let scoreNode = document.createTextNode("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
+        let scoreNode = document.createElement("p");
+        scoreNode.textContent = ("You have won " + playerScore.toString() + " games. Computer has won " + computerScore.toString() + " games.");
         results.appendChild(scoreNode);
     // }
     
     // Announce the winner
-    if (playerScore > 5) {
-        console.log("You beat the computer!")
-    } else if (computerScore > 5) {
-        console.log("The computer beat you!")
+    if (playerScore >= 5) {
+        let finalResultNode = document.createElement("p");
+        finalResultNode.textContent = ("You beat the computer!");
+        results.appendChild(finalResultNode);
+    } else if (computerScore >= 5) {
+        let finalResultNode = document.createElement("p");
+        finalResultNode.textContent = ("The computer beat you!");
+        results.appendChild(finalResultNode);
     }
     
 }
